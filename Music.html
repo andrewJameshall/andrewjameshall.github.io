@@ -175,28 +175,52 @@ Conveniently a bunch of us Supers have decided to make Auckland our new home bas
 				 </div>
 
 			<div style="height: 40px;"></div>
-<!-- Full-width Lab Videos Section -->
-<div class="lab-video-section" style="margin-top: 3rem;">
+
+<!-- Full-width Lab Videos Section with Expansion & Blur on Hover -->
+<div class="lab-video-section" style="margin-top: 3rem; position: relative; z-index: 1;">
   <style>
     .lab-video-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
+      position: relative;
+      z-index: 2;
     }
 
     .lab-video-grid iframe {
       width: 100%;
       max-width: 400px;
       height: 225px;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
       border: none;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, z-index 0.4s ease;
+      position: relative;
+      z-index: 2;
     }
 
     .lab-video-grid iframe:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      z-index: 20;
+      transform: scale(1.6);
+      z-index: 10;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .lab-video-grid::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      width: 100%;
+      height: 150%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+
+    .lab-video-grid:hover::before {
+      opacity: 1;
     }
 
     @media (max-width: 768px) {
@@ -208,26 +232,21 @@ Conveniently a bunch of us Supers have decided to make Auckland our new home bas
       .lab-video-grid iframe {
         max-width: 100%;
         height: auto;
+        transform: none !important;
       }
 
-      .lab-video-grid iframe:hover {
-        transform: none;
-        box-shadow: none;
+      .lab-video-grid::before {
+        display: none;
       }
     }
   </style>
 
   <h2 style="text-align: center; margin-bottom: 1rem;">🎥 Spiral Live at The Lab</h2>
-  <div class="lab-video-grid">
-    <iframe src="https://www.youtube.com/watch?v=ZxnVRIp-nyk&list=RDZxnVRIp-nyk&start_radio=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/watch?v=Pvg9_WQ3eRg&list=PLuk72atuGexO5fBAsGGylUKk03vX9CpvQ&index=3" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/watch?v=Ygx2DWj6Zz0&list=PLuk72atuGexO5fBAsGGylUKk03vX9CpvQ&index=1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/watch?v=c59WYcGQ-Ho&list=PLuk72atuGexO5fBAsGGylUKk03vX9CpvQ&index=7" allowfullscreen></iframe>
-  </div>
-</div>
 
-	
-		
+  <div class="lab-video-grid">
+    <iframe src="https://www.youtube.com/embed/ZxnVRIp-nyk" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/Pvg9_WQ3eRg" al_
+
 		
 		<!-- Footer -->
 				
