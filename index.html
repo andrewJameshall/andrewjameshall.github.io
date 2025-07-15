@@ -63,45 +63,97 @@ Andrew is also a passionate photographer, capturing people, environments, and th
 					</header>
 				</section>
 
-			<!-- Carousel -->
-<section class="carousel" style="margin-top: 0.1rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch;">
-  <div class="reel" style="display: flex; gap: 1rem; padding: 1rem;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Carousel</title>
 
-    <!-- Article 1 -->
-    <article style="flex: 0 0 auto; width: 280px;">
-      <a href="research.html" class="image featured">
-        <img src="images/pic01.jpg" alt="Acoustics & Vibration Research" style="width: 100%; height: auto; border-radius: 8px;" />
-      </a>
-      <header>
-        <h3><a href="research.html">Acoustics & Vibration Research</a></h3>
-      </header>
-      <p>Research, teaching and student opportunities</p>
-    </article>
+  <style>
+    .carousel-container {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 1rem;
+    }
 
-    <!-- Article 2 -->
-    <article style="flex: 0 0 auto; width: 280px;">
-      <a href="Music.html" class="image featured">
-        <img src="images/pic02.jpg" alt="Music" style="width: 100%; height: auto; border-radius: 8px;" />
-      </a>
-      <header>
-        <h3><a href="Music.html">Music</a></h3>
-      </header>
-      <p>Recorded music, big band arrangements and compositions</p>
-    </article>
+    .carousel-reel {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      margin: 0 auto;
+    }
 
-    <!-- Article 3 -->
-    <article style="flex: 0 0 auto; width: 280px;">
-      <a href="Photography.html" class="image featured">
-        <img src="images/pic03.jpg" alt="Photography" style="width: 100%; height: auto; border-radius: 8px;" />
-      </a>
-      <header>
-        <h3><a href="Photography.html">Photography</a></h3>
-      </header>
-      <p>A selection of photos from around the world</p>
-    </article>
+    .carousel-item {
+      flex: 0 0 auto;
+      width: 280px;
+    }
 
-  </div>
-</section>
+    .carousel-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Optional: Center the carousel on larger screens */
+    @media (min-width: 768px) {
+      .carousel-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .carousel-reel {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Carousel -->
+  <section class="carousel-container">
+    <div class="carousel-reel">
+
+      <!-- Article 1 -->
+      <article class="carousel-item">
+        <a href="research.html" class="image featured">
+          <img src="images/pic01.jpg" alt="Acoustics & Vibration Research" />
+        </a>
+        <header>
+          <h3><a href="research.html">Acoustics & Vibration Research</a></h3>
+        </header>
+        <p>Research, teaching and student opportunities</p>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="carousel-item">
+        <a href="Music.html" class="image featured">
+          <img src="images/pic02.jpg" alt="Music" />
+        </a>
+        <header>
+          <h3><a href="Music.html">Music</a></h3>
+        </header>
+        <p>Recorded music, big band arrangements and compositions</p>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="carousel-item">
+        <a href="Photography.html" class="image featured">
+          <img src="images/pic03.jpg" alt="Photography" />
+        </a>
+        <header>
+          <h3><a href="Photography.html">Photography</a></h3>
+        </header>
+        <p>A selection of photos from around the world</p>
+      </article>
+
+    </div>
+  </section>
+
+</body>
+</html>
+
 
 
 			<!-- Footer -->
