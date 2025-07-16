@@ -1,152 +1,170 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Andrew J Hall Photography</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets2/css/lightbox.min.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-      body {
-        background: url('images/bg.jpg') no-repeat center center fixed;
-        background-size: cover;
-        backdrop-filter: blur(8px);
-      }
+<head>
+  <title>Photography - Andrew J Hall</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Lightbox CSS -->
+  <link href="assets2/css/lightbox.min.css" rel="stylesheet" />
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: url('images/fulls/01.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(10px);
+      overflow-x: hidden;
+    }
 
-      .gallery-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 2rem;
-        gap: 1rem;
-      }
+    /* Top Nav Bar (Helios style) */
+    nav {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1em 2em;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-      .gallery-container a {
-        border: 4px solid white;
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-        max-width: 300px;
-        flex: 1 1 calc(25% - 2rem);
-      }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      gap: 2em;
+    }
 
-      .gallery-container a:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      transition: 0.3s;
+    }
 
-      .gallery-container img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
+    nav ul li a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
 
-      @media screen and (max-width: 768px) {
-        .gallery-container a {
-          flex: 1 1 calc(50% - 2rem);
-        }
-      }
+    .gallery-wrapper {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+      padding: 2em;
+      box-sizing: border-box;
+    }
 
-      @media screen and (max-width: 480px) {
-        .gallery-container a {
-          flex: 1 1 100%;
-        }
-      }
-    </style>
-  </head>
-  <body class="is-preload">
-    <div id="page-wrapper">
+    .row {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-right: 1em;
+    }
 
-      <!-- Header -->
-      <div id="header">
-        <div class="inner">
-          <header>
-            <h1><a href="index.html" id="logo"></a></h1>
-          </header>
-        </div>
+    .photo {
+      display: block;
+      border: 4px solid white;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 240px;
+      height: auto;
+    }
 
-        <!-- Nav -->
-        <nav id="nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="Music.html">Music</a></li>
-            <li><a href="Photography.html" class="active">Photography</a></li>
-          </ul>
-        </nav>
-      </div>
+    .photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
 
-      <!-- Main -->
-      <div class="wrapper">
-        <section>
-          <div class="gallery-container">
-            <!-- 24 Images -->
-            <!-- Make sure you have all these images in the correct folders -->
-            <!-- Fulls: images/fulls/01.jpg — Thumbs: images/thumbs/01.jpg -->
-            <!-- Repeat for 01 to 24 -->
-            <!-- Row 1 -->
-            <a href="images/fulls/01.jpg" data-lightbox="gallery"><img src="images/thumbs/01.jpg" alt=""></a>
-            <a href="images/fulls/02.jpg" data-lightbox="gallery"><img src="images/thumbs/02.jpg" alt=""></a>
-            <a href="images/fulls/03.jpg" data-lightbox="gallery"><img src="images/thumbs/03.jpg" alt=""></a>
-            <a href="images/fulls/04.jpg" data-lightbox="gallery"><img src="images/thumbs/04.jpg" alt=""></a>
-            <a href="images/fulls/05.jpg" data-lightbox="gallery"><img src="images/thumbs/05.jpg" alt=""></a>
-            <a href="images/fulls/06.jpg" data-lightbox="gallery"><img src="images/thumbs/06.jpg" alt=""></a>
-            <a href="images/fulls/07.jpg" data-lightbox="gallery"><img src="images/thumbs/07.jpg" alt=""></a>
-            <a href="images/fulls/08.jpg" data-lightbox="gallery"><img src="images/thumbs/08.jpg" alt=""></a>
-            <a href="images/fulls/09.jpg" data-lightbox="gallery"><img src="images/thumbs/09.jpg" alt=""></a>
-            <a href="images/fulls/10.jpg" data-lightbox="gallery"><img src="images/thumbs/10.jpg" alt=""></a>
-            <a href="images/fulls/11.jpg" data-lightbox="gallery"><img src="images/thumbs/11.jpg" alt=""></a>
-            <a href="images/fulls/12.jpg" data-lightbox="gallery"><img src="images/thumbs/12.jpg" alt=""></a>
-            <!-- Row 2 -->
-            <a href="images/fulls/13.jpg" data-lightbox="gallery"><img src="images/thumbs/13.jpg" alt=""></a>
-            <a href="images/fulls/14.jpg" data-lightbox="gallery"><img src="images/thumbs/14.jpg" alt=""></a>
-            <a href="images/fulls/15.jpg" data-lightbox="gallery"><img src="images/thumbs/15.jpg" alt=""></a>
-            <a href="images/fulls/16.jpg" data-lightbox="gallery"><img src="images/thumbs/16.jpg" alt=""></a>
-            <a href="images/fulls/17.jpg" data-lightbox="gallery"><img src="images/thumbs/17.jpg" alt=""></a>
-            <a href="images/fulls/18.jpg" data-lightbox="gallery"><img src="images/thumbs/18.jpg" alt=""></a>
-            <a href="images/fulls/19.jpg" data-lightbox="gallery"><img src="images/thumbs/19.jpg" alt=""></a>
-            <a href="images/fulls/20.jpg" data-lightbox="gallery"><img src="images/thumbs/20.jpg" alt=""></a>
-            <a href="images/fulls/21.jpg" data-lightbox="gallery"><img src="images/thumbs/21.jpg" alt=""></a>
-            <a href="images/fulls/22.jpg" data-lightbox="gallery"><img src="images/thumbs/22.jpg" alt=""></a>
-            <a href="images/fulls/23.jpg" data-lightbox="gallery"><img src="images/thumbs/23.jpg" alt=""></a>
-            <a href="images/fulls/24.jpg" data-lightbox="gallery"><img src="images/thumbs/24.jpg" alt=""></a>
-          </div>
-        </section>
-      </div>
+    /* Scrollbar styling */
+    .gallery-wrapper::-webkit-scrollbar {
+      height: 10px;
+    }
 
-      <!-- Footer -->
-      <div id="footer">
-        <div class="container">
-          <section class="contact">
-            <header>
-              <h3>Want to collaborate? Let's talk</h3>
-            </header>
-            <ul class="icons">
-              <li><a href="mailto:a.hall@auckland.ac.nz" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-              <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            </ul>
-          </section>
-          <div class="copyright">
-            <ul class="menu">
-              <li>&copy; Andrew J Hall. All rights reserved.</li>
-              <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    .gallery-wrapper::-webkit-scrollbar-thumb {
+      background-color: rgba(100, 100, 100, 0.4);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="Music.html">Music</a></li>
+      <li><a href="Photography.html">Photography</a></li>
+    </ul>
+  </nav>
+
+  <!-- Horizontal Scrollable Image Gallery -->
+  <div class="gallery-wrapper">
+    <!-- 12 Columns of paired images (2 rows per column) -->
+    <!-- Images 01–24 -->
+    <!-- Repeat the block below 12 times with paired images -->
+    <!-- Column 1 -->
+    <div class="row">
+      <a href="images/fulls/01.jpg" data-lightbox="gallery"><img src="images/thumbs/01.jpg" class="photo" /></a>
+      <a href="images/fulls/13.jpg" data-lightbox="gallery"><img src="images/thumbs/13.jpg" class="photo" /></a>
     </div>
+    <div class="row">
+      <a href="images/fulls/02.jpg" data-lightbox="gallery"><img src="images/thumbs/02.jpg" class="photo" /></a>
+      <a href="images/fulls/14.jpg" data-lightbox="gallery"><img src="images/thumbs/14.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/03.jpg" data-lightbox="gallery"><img src="images/thumbs/03.jpg" class="photo" /></a>
+      <a href="images/fulls/15.jpg" data-lightbox="gallery"><img src="images/thumbs/15.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/04.jpg" data-lightbox="gallery"><img src="images/thumbs/04.jpg" class="photo" /></a>
+      <a href="images/fulls/16.jpg" data-lightbox="gallery"><img src="images/thumbs/16.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/05.jpg" data-lightbox="gallery"><img src="images/thumbs/05.jpg" class="photo" /></a>
+      <a href="images/fulls/17.jpg" data-lightbox="gallery"><img src="images/thumbs/17.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/06.jpg" data-lightbox="gallery"><img src="images/thumbs/06.jpg" class="photo" /></a>
+      <a href="images/fulls/18.jpg" data-lightbox="gallery"><img src="images/thumbs/18.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/07.jpg" data-lightbox="gallery"><img src="images/thumbs/07.jpg" class="photo" /></a>
+      <a href="images/fulls/19.jpg" data-lightbox="gallery"><img src="images/thumbs/19.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/08.jpg" data-lightbox="gallery"><img src="images/thumbs/08.jpg" class="photo" /></a>
+      <a href="images/fulls/20.jpg" data-lightbox="gallery"><img src="images/thumbs/20.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/09.jpg" data-lightbox="gallery"><img src="images/thumbs/09.jpg" class="photo" /></a>
+      <a href="images/fulls/21.jpg" data-lightbox="gallery"><img src="images/thumbs/21.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/10.jpg" data-lightbox="gallery"><img src="images/thumbs/10.jpg" class="photo" /></a>
+      <a href="images/fulls/22.jpg" data-lightbox="gallery"><img src="images/thumbs/22.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/11.jpg" data-lightbox="gallery"><img src="images/thumbs/11.jpg" class="photo" /></a>
+      <a href="images/fulls/23.jpg" data-lightbox="gallery"><img src="images/thumbs/23.jpg" class="photo" /></a>
+    </div>
+    <div class="row">
+      <a href="images/fulls/12.jpg" data-lightbox="gallery"><img src="images/thumbs/12.jpg" class="photo" /></a>
+      <a href="images/fulls/24.jpg" data-lightbox="gallery"><img src="images/thumbs/24.jpg" class="photo" /></a>
+    </div>
+  </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets2/js/lightbox.min.js"></script>
-  </body>
+  <!-- Lightbox JS -->
+  <script src="assets2/js/lightbox.min.js"></script>
+
+</body>
 </html>
+
 
 
 
