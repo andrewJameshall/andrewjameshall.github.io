@@ -1,66 +1,71 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
   <title>Andrew J Hall Photography</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Photography by Andrew J Hall – landscapes, travel, street, and creative photography from around the world.">
-  <meta name="author" content="Andrew J Hall">
-  <meta property="og:title" content="Andrew J Hall Photography">
-  <meta property="og:description" content="Explore the photography of Andrew J Hall – from Aotearoa to the world.">
-  <meta property="og:image" content="images/thumbs/01.jpg">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets2/css/main.css" />
   <noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
-
   <style>
-  .image img {
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    will-change: transform;
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+    .image img {
+      transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+      will-change: transform;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-  .image:hover img {
-    transform: scale(1.08);
-    opacity: 0.9;
-    z-index: 2;
-  }
-</style>
+    .image:hover img {
+      transform: scale(1.08);
+      opacity: 0.9;
+      z-index: 2;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    @media screen and (max-width: 768px) {
+      .items {
+        display: block;
+      }
+
+      .item {
+        width: 100% !important;
+        margin: 0 auto;
+      }
+
+      .thumb img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    #header nav ul li a.active {
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
+    }
+  </style>
 </head>
-
 <body class="is-preload">
+  <div id="page-wrapper">
 
- <!-- Header -->
-				<div id="header">
-
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo"><i>   </i></a></h1>
-							</header>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li><a href="research.html">Research</a></li>
-								<li><a href="Music.html">Music</a></li>
-								<li><a href="Photography.html">Photography</a></li>
-							</ul>
-						</nav>
-
-				</div>
+    <!-- Header -->
+    <div id="header">
+      <div class="inner">
+        <header>
+          <h1><a href="index.html" id="logo">Andrew J Hall</a></h1>
+        </header>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="Music.html">Music</a></li>
+          <li><a href="Photography.html">Photography</a></li>
+        </ul>
+      </nav>
+    </div>
 
 
-  <!-- Wrapper -->
-  <div id="wrapper">
-
-    <!-- Main -->
+       <!-- Main -->
     <section id="main">
       <p style="line-height: 1.5;"></p>
 
@@ -171,29 +176,33 @@
         <article class="item thumb span-2">
           <a href="images/fulls/24.jpg" class="image"><img src="images/thumbs/24.jpg" alt="Photo 24"></a>
         </article>
+
+
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
-      <nav id="nav">
-        <ul>
-          <li><a href="index.html">
-              <h1 style="font-size: 2em;">Home</h1>
-            </a></li>
-        </ul>
-      </nav>
-
-      <ul class="icons">
-        <li><a href="mailto:your@email.com" class="icon solid fa-envelope">
-          <span class="label">Email</span></a></li>
-      </ul>
-
-      <ul class="copyright">
-        <li>&copy; Andrew J Hall</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </footer>
+    <div id="footer">
+      <div class="container">
+        <div class="col-12">
+          <section class="contact">
+            <header>
+              <h3>Want to collaborate? Let's talk</h3>
+            </header>
+            <ul class="icons">
+              <li><a href="mailto:a.hall@auckland.ac.nz" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+              <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+            </ul>
+          </section>
+          <div class="copyright">
+            <ul class="menu">
+              <li>&copy; Andrew J Hall. All rights reserved.</li>
+              <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Scripts -->
@@ -203,6 +212,6 @@
   <script src="assets2/js/breakpoints.min.js"></script>
   <script src="assets2/js/util.js"></script>
   <script src="assets2/js/main.js"></script>
-
 </body>
 </html>
+
