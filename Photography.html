@@ -22,7 +22,7 @@
       min-height: 100vh;
     }
 
-    /* Sticky Helios-style Nav */
+    /* Sticky Nav */
     #nav {
       background: rgba(0, 0, 0, 0.7);
       position: sticky;
@@ -75,11 +75,12 @@
     }
 
     .gallery-row a img {
-      height: 200px;
+      height: 220px;
       object-fit: cover;
       border: 4px solid white;
       border-radius: 5px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: block;
     }
 
     .gallery-row a img:hover {
@@ -118,13 +119,12 @@
   <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
-  <!-- JS to Generate Images -->
+  <!-- Generate images with random width (some full width) -->
   <script>
     const totalImages = 24;
     const row1 = document.getElementById('row1');
     const row2 = document.getElementById('row2');
 
-    // Generate shuffled array of numbers from 1 to 24
     let images = Array.from({ length: totalImages }, (_, i) => String(i + 1).padStart(2, '0'));
     for (let i = images.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -132,17 +132,22 @@
     }
 
     images.forEach((num, idx) => {
-      const width = Math.floor(Math.random() * 101) + 200; // 200–300 px
+      // 1 in 6 chance of being full-width
+      const isFullWidth = Math.random() < 0.17;
+      const width = isFullWidth ? '100%' : `${Math.floor(Math.random() * 101) + 200}px`;
+
       const imgHTML = `
         <a href="images/fulls/${num}.jpg" data-lightbox="gallery">
-          <img src="images/thumbs/${num}.jpg" style="width:${width}px;" alt="">
+          <img src="images/thumbs/${num}.jpg" style="width:${width};" alt="">
         </a>
       `;
+
       (idx < 12 ? row1 : row2).innerHTML += imgHTML;
     });
   </script>
 </body>
 </html>
+
 
 
 
