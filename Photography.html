@@ -1,120 +1,214 @@
 <!DOCTYPE HTML>
-<!--
-    Parallelism by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 
 <head>
-    <title>Andrew J Hall Photography</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Photography by Andrew J Hall – landscapes, travel, street, and creative photography from around the world.">
-    <meta name="author" content="Andrew J Hall">
-    <meta property="og:title" content="Andrew J Hall Photography">
-    <meta property="og:description" content="Explore the photography of Andrew J Hall – from Aotearoa to the world.">
-    <meta property="og:image" content="images/thumbs/01.jpg">
-    <meta property="og:type" content="website">
+  <title>Andrew J Hall Photography</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Photography by Andrew J Hall – landscapes, travel, street, and creative photography from around the world.">
+  <meta name="author" content="Andrew J Hall">
+  <meta property="og:title" content="Andrew J Hall Photography">
+  <meta property="og:description" content="Explore the photography of Andrew J Hall – from Aotearoa to the world.">
+  <meta property="og:image" content="images/thumbs/01.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets2/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
 
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets2/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets2/css/noscript.css" /></noscript>
+  <style>
+    .image img {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+    }
 
-    <style>
-        /* Image hover effect */
-        .image img {
-            transition: transform 0.4s ease, opacity 0.4s ease;
-        }
+    .image:hover img {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
 
-        .image:hover img {
-            transform: scale(1.1);
-            opacity: 0.85;
-        }
+    @media screen and (max-width: 768px) {
+      .items {
+        display: block;
+      }
 
-        /* Responsive layout for mobile */
-        @media screen and (max-width: 768px) {
-            .items {
-                display: block;
-            }
+      .item {
+        width: 100% !important;
+        margin: 0 auto;
+      }
 
-            .item {
-                width: 100% !important;
-                margin: 0 auto;
-            }
+      .thumb img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
-            .thumb img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    </style>
+    #header nav ul li a.active {
+      font-weight: bold;
+      border-bottom: 2px solid #fff;
+    }
+  </style>
 </head>
 
 <body class="is-preload">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+  <!-- Header -->
+  <header id="header">
+    <h1><a href="index.html">Andrew J Hall</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="photography.html" class="active">Photography</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Main -->
-        <section id="main">
-            <p style="line-height: 1.5;">
-            <div class="items">
+  <!-- Wrapper -->
+  <div id="wrapper">
 
-                <div class="item intro span-2">
-                    <h1>Andrew J Hall</h1>
-                    <p>Photos from around the world<br /></p>
-                </div>
+    <!-- Main -->
+    <section id="main">
+      <p style="line-height: 1.5;"></p>
 
-                <!-- Thumbnails (example batch only for brevity) -->
-                <article class="item thumb span-1">
-                    <a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="Mountain landscape"></a>
-                </article>
-                <article class="item thumb span-2">
-                    <a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="City skyline at dusk"></a>
-                </article>
-                <!-- Repeat for other photos... -->
+      <!-- First Image Grid -->
+      <div class="items">
 
-            </div>
+        <div class="item intro span-2">
+          <h1>Andrew J Hall</h1>
+          <p>Photos from around the world</p>
+        </div>
 
-            <div class="items">
-                <!-- Second batch of images -->
-                <article class="item thumb span-2">
-                    <a href="images/fulls/13.jpg" class="image"><img src="images/thumbs/13.jpg" alt="Ocean view"></a>
-                </article>
-                <!-- Repeat as needed... -->
-            </div>
-        </section>
+        <article class="item thumb span-1">
+          <a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="Photo 1"></a>
+        </article>
 
-        <!-- Footer -->
-        <footer id="footer">
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">
-                        <h1 style="font-size: 2em;">Home</h1>
-                    </a></li>
-                </ul>
-            </nav>
+        <article class="item thumb span-2">
+          <a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="Photo 2"></a>
+        </article>
 
-            <ul class="icons">
-                <li><a href="mailto:your@email.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-            </ul>
+        <article class="item thumb span-1">
+          <a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt="Photo 3"></a>
+        </article>
 
-            <ul class="copyright">
-                <li>&copy; Andrew J Hall</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
-        </footer>
+        <article class="item thumb span-1">
+          <a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt="Photo 4"></a>
+        </article>
 
-    </div>
+        <article class="item thumb span-3">
+          <a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt="Photo 5"></a>
+        </article>
 
-    <!-- Scripts -->
-    <script src="assets2/js/jquery.min.js"></script>
-    <script src="assets2/js/jquery.poptrox.min.js"></script>
-    <script src="assets2/js/browser.min.js"></script>
-    <script src="assets2/js/breakpoints.min.js"></script>
-    <script src="assets2/js/util.js"></script>
-    <script src="assets2/js/main.js"></script>
+        <article class="item thumb span-1">
+          <a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="Photo 6"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="Photo 7"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="Photo 8"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="Photo 9"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="Photo 10"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/11.jpg" alt="Photo 11"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/12.jpg" class="image"><img src="images/thumbs/12.jpg" alt="Photo 12"></a>
+        </article>
+      </div>
+
+      <!-- Second Image Grid -->
+      <div class="items">
+
+        <article class="item thumb span-3">
+          <a href="images/fulls/13.jpg" class="image"><img src="images/thumbs/13.jpg" alt="Photo 13"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/14.jpg" class="image"><img src="images/thumbs/14.jpg" alt="Photo 14"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/15.jpg" class="image"><img src="images/thumbs/15.jpg" alt="Photo 15"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/16.jpg" class="image"><img src="images/thumbs/16.jpg" alt="Photo 16"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/17.jpg" class="image"><img src="images/thumbs/17.jpg" alt="Photo 17"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/18.jpg" class="image"><img src="images/thumbs/18.jpg" alt="Photo 18"></a>
+        </article>
+
+        <article class="item thumb span-3">
+          <a href="images/fulls/19.jpg" class="image"><img src="images/thumbs/19.jpg" alt="Photo 19"></a>
+        </article>
+
+        <article class="item thumb span-1">
+          <a href="images/fulls/20.jpg" class="image"><img src="images/thumbs/20.jpg" alt="Photo 20"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/21.jpg" class="image"><img src="images/thumbs/21.jpg" alt="Photo 21"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/22.jpg" class="image"><img src="images/thumbs/22.jpg" alt="Photo 22"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/23.jpg" class="image"><img src="images/thumbs/23.jpg" alt="Photo 23"></a>
+        </article>
+
+        <article class="item thumb span-2">
+          <a href="images/fulls/24.jpg" class="image"><img src="images/thumbs/24.jpg" alt="Photo 24"></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">
+              <h1 style="font-size: 2em;">Home</h1>
+            </a></li>
+        </ul>
+      </nav>
+
+      <ul class="icons">
+        <li><a href="mailto:your@email.com" class="icon solid fa-envelope">
+          <span class="label">Email</span></a></li>
+      </ul>
+
+      <ul class="copyright">
+        <li>&copy; Andrew J Hall</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets2/js/jquery.min.js"></script>
+  <script src="assets2/js/jquery.poptrox.min.js"></script>
+  <script src="assets2/js/browser.min.js"></script>
+  <script src="assets2/js/breakpoints.min.js"></script>
+  <script src="assets2/js/util.js"></script>
+  <script src="assets2/js/main.js"></script>
 
 </body>
 </html>
