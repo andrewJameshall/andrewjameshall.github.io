@@ -1,7 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-  Photography Page using Helios template styling
--->
 <html>
   <head>
     <title>Andrew J Hall Photography</title>
@@ -10,43 +7,58 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 2rem 0;
+      body {
+        background: url('images/overlay.png'), url('images/bg.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
-      .gallery a {
-        display: block;
+      .gallery-scroll {
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding: 2rem;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .gallery-scroll a {
+        display: inline-block;
+        scroll-snap-align: start;
         border: 4px solid white;
-        overflow: hidden;
         transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
         max-width: 300px;
         width: 100%;
       }
 
-      .gallery a:hover {
+      .gallery-scroll a:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
       }
 
-      .gallery img {
+      .gallery-scroll img {
         width: 100%;
         height: auto;
         display: block;
       }
+
+      .wrapper {
+        background: rgba(255, 255, 255, 0.0);
+      }
     </style>
   </head>
-  <body class="left-sidebar is-preload">
+  <body class="is-preload">
     <div id="page-wrapper">
 
       <!-- Header -->
       <div id="header">
         <div class="inner">
           <header>
-            <h1><a href="index.html" id="logo">Andrew J Hall</a></h1>
+            <h1><a href="index.html" id="logo"></a></h1>
           </header>
         </div>
 
@@ -62,41 +74,17 @@
       </div>
 
       <!-- Main -->
-      <div class="wrapper style1">
-        <div class="container">
-          <header class="major">
-            <h2>Photography</h2>
-            <p>Photos from around the world</p>
-          </header>
-
-          <div class="gallery">
-            <!-- Example entries, copy and extend with remaining images -->
+      <div class="wrapper">
+        <section>
+          <div class="gallery-scroll">
             <a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="" /></a>
             <a href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
             <a href="images/fulls/03.jpg"><img src="images/thumbs/03.jpg" alt="" /></a>
             <a href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
             <a href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt="" /></a>
             <a href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
-            <a href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
-            <a href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
-            <a href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
-            <a href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
-            <a href="images/fulls/11.jpg"><img src="images/thumbs/11.jpg" alt="" /></a>
-            <a href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
-            <a href="images/fulls/13.jpg"><img src="images/thumbs/13.jpg" alt="" /></a>
-            <a href="images/fulls/14.jpg"><img src="images/thumbs/14.jpg" alt="" /></a>
-            <a href="images/fulls/15.jpg"><img src="images/thumbs/15.jpg" alt="" /></a>
-            <a href="images/fulls/16.jpg"><img src="images/thumbs/16.jpg" alt="" /></a>
-            <a href="images/fulls/17.jpg"><img src="images/thumbs/17.jpg" alt="" /></a>
-            <a href="images/fulls/18.jpg"><img src="images/thumbs/18.jpg" alt="" /></a>
-            <a href="images/fulls/19.jpg"><img src="images/thumbs/19.jpg" alt="" /></a>
-            <a href="images/fulls/20.jpg"><img src="images/thumbs/20.jpg" alt="" /></a>
-            <a href="images/fulls/21.jpg"><img src="images/thumbs/21.jpg" alt="" /></a>
-            <a href="images/fulls/22.jpg"><img src="images/thumbs/22.jpg" alt="" /></a>
-            <a href="images/fulls/23.jpg"><img src="images/thumbs/23.jpg" alt="" /></a>
-            <a href="images/fulls/24.jpg"><img src="images/thumbs/24.jpg" alt="" /></a>
           </div>
-        </div>
+        </section>
       </div>
 
       <!-- Footer -->
@@ -133,5 +121,6 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
