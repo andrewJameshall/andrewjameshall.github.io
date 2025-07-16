@@ -18,41 +18,39 @@
 
     .backdrop {
       backdrop-filter: blur(8px);
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
       min-height: 100vh;
-      padding: 0;
     }
 
-    /* Navigation Bar */
-    nav {
-      width: 100%;
+    /* Sticky Nav Matching Helios */
+    #nav {
       background: rgba(0, 0, 0, 0.7);
-      padding: 1em 0;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
+      padding: 1em 0;
+    }
+
+    #nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li {
+    #nav ul li {
       display: inline-block;
       margin: 0 1.5em;
     }
 
-    nav ul li a {
-      color: #fff;
+    #nav ul li a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2em;
     }
 
-    nav ul li a:hover {
+    #nav ul li a:hover {
       text-decoration: underline;
     }
 
@@ -70,6 +68,8 @@
     }
 
     .gallery-row a img {
+      height: 200px;
+      width: auto;
       border: 4px solid white;
       border-radius: 5px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -82,19 +82,18 @@
     }
 
     @media (max-width: 768px) {
-      nav ul li {
+      #nav ul li {
         display: block;
         margin: 0.5em 0;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="backdrop">
 
-    <!-- Navigation -->
-    <nav>
+    <!-- Sticky Nav -->
+    <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
@@ -108,12 +107,13 @@
       <div class="gallery-row" id="row1"></div>
       <div class="gallery-row" id="row2"></div>
     </div>
+
   </div>
 
   <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
-  <!-- Random Image Loader -->
+  <!-- JS to Shuffle + Resize Images -->
   <script>
     const images = Array.from({ length: 24 }, (_, i) => (i + 1).toString().padStart(2, '0'));
 
@@ -128,17 +128,18 @@
 
     images.forEach((num, idx) => {
       const width = Math.floor(Math.random() * 100) + 200; // 200–300px
-      const img = `
+      const imgTag = `
         <a href="images/fulls/${num}.jpg" data-lightbox="gallery">
           <img src="images/thumbs/${num}.jpg" style="width:${width}px;" alt="">
         </a>
       `;
-      const row = idx < 12 ? "row1" : "row2";
-      document.getElementById(row).innerHTML += img;
+      const rowId = idx < 12 ? "row1" : "row2";
+      document.getElementById(rowId).innerHTML += imgTag;
     });
   </script>
 </body>
 </html>
+
 
 
 
