@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>Photography | Andrew J Hall</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrew J Hall Photography</title>
 
-  <!-- Helios CSS -->
-  <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- Lightbox2 CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"/>
+  <!-- Lightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 
   <style>
     body {
@@ -17,45 +14,91 @@
       font-family: sans-serif;
       background: url('images/bg.jpg') no-repeat center center fixed;
       background-size: cover;
+    }
+
+    .blur {
       backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.1);
+      min-height: 100vh;
+    }
+
+    /* Sticky Helios-style Nav */
+    #nav {
+      background: rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    #nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 1em;
+      text-align: center;
+    }
+
+    #nav ul li {
+      display: inline-block;
+      margin: 0 1.5em;
+    }
+
+    #nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    #nav ul li a:hover {
+      text-decoration: underline;
     }
 
     .gallery-wrapper {
-      overflow-x: auto;
-      white-space: nowrap;
-      padding: 3em 2em;
+      padding: 2em;
     }
 
     .gallery-row {
       display: flex;
-      flex-direction: row;
+      overflow-x: auto;
+      flex-wrap: nowrap;
       gap: 1em;
-      margin-bottom: 2em;
+      padding: 1em 0;
     }
 
-    .gallery-row img {
-      height: 250px;
-      border: 6px solid white;
+    .gallery-row::-webkit-scrollbar {
+      height: 10px;
+    }
+
+    .gallery-row::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 5px;
+    }
+
+    .gallery-row a img {
+      height: 200px;
+      object-fit: cover;
+      border: 4px solid white;
       border-radius: 5px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      object-fit: cover;
     }
 
-    .gallery-row img:hover {
-      transform: scale(1.06);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    .gallery-row a img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      #nav ul li {
+        display: block;
+        margin: 0.5em 0;
+      }
     }
   </style>
 </head>
-<body>
 
-  <!-- Helios-style Navigation -->
-  <div id="header">
-    <div class="inner">
-      <header>
-        <h1><a href="index.html" id="logo"></a></h1>
-      </header>
-    </div>
+<body>
+  <div class="blur">
+    <!-- Nav -->
     <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -64,50 +107,43 @@
         <li><a href="Photography.html">Photography</a></li>
       </ul>
     </nav>
-  </div>
 
-  <!-- GALLERY -->
-  <div class="gallery-wrapper">
-
-    <!-- Row 1 -->
-    <div class="gallery-row">
-      <a href="images/fulls/01.jpg" data-lightbox="gallery"><img src="images/thumbs/01.jpg" style="width: 240px;" alt=""></a>
-      <a href="images/fulls/02.jpg" data-lightbox="gallery"><img src="images/thumbs/02.jpg" style="width: 285px;" alt=""></a>
-      <a href="images/fulls/03.jpg" data-lightbox="gallery"><img src="images/thumbs/03.jpg" style="width: 215px;" alt=""></a>
-      <a href="images/fulls/04.jpg" data-lightbox="gallery"><img src="images/thumbs/04.jpg" style="width: 260px;" alt=""></a>
-      <a href="images/fulls/05.jpg" data-lightbox="gallery"><img src="images/thumbs/05.jpg" style="width: 225px;" alt=""></a>
-      <a href="images/fulls/06.jpg" data-lightbox="gallery"><img src="images/thumbs/06.jpg" style="width: 295px;" alt=""></a>
-      <a href="images/fulls/07.jpg" data-lightbox="gallery"><img src="images/thumbs/07.jpg" style="width: 210px;" alt=""></a>
-      <a href="images/fulls/08.jpg" data-lightbox="gallery"><img src="images/thumbs/08.jpg" style="width: 270px;" alt=""></a>
-      <a href="images/fulls/09.jpg" data-lightbox="gallery"><img src="images/thumbs/09.jpg" style="width: 230px;" alt=""></a>
-      <a href="images/fulls/10.jpg" data-lightbox="gallery"><img src="images/thumbs/10.jpg" style="width: 255px;" alt=""></a>
-      <a href="images/fulls/11.jpg" data-lightbox="gallery"><img src="images/thumbs/11.jpg" style="width: 200px;" alt=""></a>
-      <a href="images/fulls/12.jpg" data-lightbox="gallery"><img src="images/thumbs/12.jpg" style="width: 290px;" alt=""></a>
+    <!-- Gallery -->
+    <div class="gallery-wrapper">
+      <div class="gallery-row" id="row1"></div>
+      <div class="gallery-row" id="row2"></div>
     </div>
-
-    <!-- Row 2 -->
-    <div class="gallery-row">
-      <a href="images/fulls/13.jpg" data-lightbox="gallery"><img src="images/thumbs/13.jpg" style="width: 280px;" alt=""></a>
-      <a href="images/fulls/14.jpg" data-lightbox="gallery"><img src="images/thumbs/14.jpg" style="width: 235px;" alt=""></a>
-      <a href="images/fulls/15.jpg" data-lightbox="gallery"><img src="images/thumbs/15.jpg" style="width: 250px;" alt=""></a>
-      <a href="images/fulls/16.jpg" data-lightbox="gallery"><img src="images/thumbs/16.jpg" style="width: 210px;" alt=""></a>
-      <a href="images/fulls/17.jpg" data-lightbox="gallery"><img src="images/thumbs/17.jpg" style="width: 270px;" alt=""></a>
-      <a href="images/fulls/18.jpg" data-lightbox="gallery"><img src="images/thumbs/18.jpg" style="width: 295px;" alt=""></a>
-      <a href="images/fulls/19.jpg" data-lightbox="gallery"><img src="images/thumbs/19.jpg" style="width: 200px;" alt=""></a>
-      <a href="images/fulls/20.jpg" data-lightbox="gallery"><img src="images/thumbs/20.jpg" style="width: 265px;" alt=""></a>
-      <a href="images/fulls/21.jpg" data-lightbox="gallery"><img src="images/thumbs/21.jpg" style="width: 225px;" alt=""></a>
-      <a href="images/fulls/22.jpg" data-lightbox="gallery"><img src="images/thumbs/22.jpg" style="width: 240px;" alt=""></a>
-      <a href="images/fulls/23.jpg" data-lightbox="gallery"><img src="images/thumbs/23.jpg" style="width: 290px;" alt=""></a>
-      <a href="images/fulls/24.jpg" data-lightbox="gallery"><img src="images/thumbs/24.jpg" style="width: 215px;" alt=""></a>
-    </div>
-
   </div>
 
   <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 
+  <!-- JS to Generate Images -->
+  <script>
+    const totalImages = 24;
+    const row1 = document.getElementById('row1');
+    const row2 = document.getElementById('row2');
+
+    // Generate shuffled array of numbers from 1 to 24
+    let images = Array.from({ length: totalImages }, (_, i) => String(i + 1).padStart(2, '0'));
+    for (let i = images.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [images[i], images[j]] = [images[j], images[i]];
+    }
+
+    images.forEach((num, idx) => {
+      const width = Math.floor(Math.random() * 101) + 200; // 200–300 px
+      const imgHTML = `
+        <a href="images/fulls/${num}.jpg" data-lightbox="gallery">
+          <img src="images/thumbs/${num}.jpg" style="width:${width}px;" alt="">
+        </a>
+      `;
+      (idx < 12 ? row1 : row2).innerHTML += imgHTML;
+    });
+  </script>
 </body>
 </html>
+
 
 
 
